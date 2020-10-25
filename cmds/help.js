@@ -19,8 +19,8 @@ const menus = {
     --direct, -d .............. connect via [user@]hostname
     `,
 
-  ls: `
-    marcossh ls
+  list: `
+    marcossh list
     `,
 
   add: `

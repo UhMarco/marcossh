@@ -26,6 +26,10 @@ module.exports = () => {
       require('./cmds/remove')(args);
       break;
 
+    case 'list':
+      require('./cmds/list')(args);
+      break;
+
     case 'help':
       require('./cmds/help')(args);
       break;
