@@ -7,13 +7,13 @@ module.exports = (margs) => {
   const deleteByHostname = margs.host || margs.hostname || null
 
   if (!profiles[args[0]] && !deleteByHostname) {
-    return console.log(`\n    Profile '${args[0]}' does not exist.\n`);
+    return console.log(`Profile '${args[0]}' does not exist.`);
   } else if (deleteByHostname && Object.values(profiles).indexOf(deleteByHostname)) {
-    return console.log(`\n    No profile is using the hostname ${deleteByHostname}.\n`);
+    return console.log(`No profile is using the hostname ${deleteByHostname}.`);
   }
 
   let target = deleteByHostname ? Object.keys(profiles).find(key => profiles[key] === deleteByHostname) : args[0]
-  console.log(`\n   Deleted profile '${target}' with hostname '${profiles[target]}.'\n`);
+  console.log(`Deleted profile '${target}' with hostname '${profiles[target]}.'`);
   delete profiles[target]
   jsonfile.writeFileSync(__dirname + '/../profiles.json', profiles);
 };
