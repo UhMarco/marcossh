@@ -24,9 +24,7 @@ const menus = {
     `,
 
   add: `
-    marcossh add [name] [[user@]hostname] <options>
-
-    --no-name, -nm ..... set profile name to hostname
+    marcossh add [name] [[user@]hostname]
     `,
 
   remove: `

@@ -18,6 +18,10 @@ module.exports = () => {
       require('./cmds/connect')(args);
       break;
 
+    case 'add':
+      require('./cmds/add')(args);
+      break;
+
     case 'help':
       require('./cmds/help')(args);
       break;
