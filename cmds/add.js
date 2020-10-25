@@ -1,7 +1,7 @@
 const jsonfile = require('jsonfile');
 
 module.exports = (margs) => {
-  args = margs._.slice(1)
+  args = margs._.slice(1);
 
   let profiles = jsonfile.readFileSync('profiles.json');
 
