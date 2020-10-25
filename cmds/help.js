@@ -2,11 +2,11 @@ const menus = {
   main: `
     marcossh [command] <options>
 
-    connect ............ ssh to a profile or direct ssh
-    list ............... list ssh profiles
-    add ................ add an ssh profile
-    remove ............. remove an ssh profile
-    help ............... show help menu for a command
+    connect ................... ssh to a profile or direct ssh
+    list ...................... list ssh profiles
+    add ....................... add an ssh profile
+    remove .................... remove an ssh profile
+    help ...................... show help menu for a command
     `,
 
   echo: `
@@ -16,7 +16,7 @@ const menus = {
   connect: `
     marcossh connect <options> [connection]
 
-    --direct, -d ....... connect via [user@]hostname
+    --direct, -d .............. connect via [user@]hostname
     `,
 
   ls: `
@@ -30,7 +30,8 @@ const menus = {
   remove: `
     marcossh remove [name] <options>
 
-    --all, -a .......... removes all profiles
+    --hostname, --host .... remove profile by hostname
+    --all, -a ................. removes all profiles
     `,
 }
 
