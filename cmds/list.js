@@ -3,7 +3,7 @@ const jsonfile = require('jsonfile');
 module.exports = (margs) => {
   args = margs._.slice(1);
 
-  let profiles = jsonfile.readFileSync('profiles.json');
+  const profiles = jsonfile.readFileSync('profiles.json');
   if (Object.values(profiles) == 0) {
     return console.log('No profiles saved.');
   }
