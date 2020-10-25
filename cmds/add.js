@@ -3,7 +3,7 @@ const jsonfile = require('jsonfile');
 module.exports = (margs) => {
   args = margs._.slice(1);
 
-  let profiles = jsonfile.readFileSync('profiles.json');
+  let profiles = jsonfile.readFileSync(__dirname + '/../profiles.json');
 
   if (!args[0] || !args[1]) {
     return console.log('Missing input. Do "marcossh add -help" for syntax.');
@@ -14,7 +14,7 @@ module.exports = (margs) => {
   }
 
   profiles[args[0]] = args[1];
-  jsonfile.writeFileSync('profiles.json', profiles);
+  jsonfile.writeFileSync(__dirname + '/../profiles.json', profiles);
 
   console.log(`Profile '${args[0]}' created leading to '${args[1]}'.`);
 };

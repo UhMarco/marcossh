@@ -12,7 +12,7 @@ module.exports = (margs) => {
     console.log(`Direct connect: ${target}`);
     shell.exec(`osascript -e 'tell app "Terminal" to do script "ssh ${target}"'`)
   } else {
-    const profiles = jsonfile.readFileSync('profiles.json')
+    const profiles = jsonfile.readFileSync(__dirname + '/../profiles.json')
     if (profiles[args]) {
       console.log(`Connect to profile: ${args}`);
       shell.exec(`osascript -e 'tell app "Terminal" to do script "ssh ${profiles[args]}"'`)
