@@ -9,15 +9,15 @@ module.exports = (margs) => {
   const target = margs.direct || margs.d || null
 
   if (target) {
-    console.log(`Direct connect: ${target}`);
+    console.log(`\nDirect connect: ${target}`);
     shell.exec(`osascript -e 'tell app "Terminal" to do script "ssh ${target}"'`)
   } else {
     const profiles = jsonfile.readFileSync(__dirname + '/../profiles.json')
     if (profiles[args]) {
-      console.log(`Connect to profile: ${args}`);
+      console.log(`\nConnect to profile: ${args}`);
       shell.exec(`osascript -e 'tell app "Terminal" to do script "ssh ${profiles[args]}"'`)
     } else {
-      console.log(`Profile '${args}' does not exist.`);
+      console.log(`\nProfile '${args}' does not exist.\n`);
     }
 
   }
