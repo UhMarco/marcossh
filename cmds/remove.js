@@ -6,6 +6,11 @@ module.exports = (margs) => {
   let profiles = jsonfile.readFileSync(__dirname + '/../profiles.json');
   const deleteByHostname = margs.host || margs.hostname || null
 
+  if (margs.all || margs.a) {
+    jsonfile.writeFileSync(__dirname + '/../profiles.json', {});
+    return console.log('Deleted all profiles.');
+  }
+
   if (!profiles[args[0]] && !deleteByHostname) {
     return console.log(`Profile '${args[0]}' does not exist.`);
   } else if (deleteByHostname && Object.values(profiles).indexOf(deleteByHostname)) {
