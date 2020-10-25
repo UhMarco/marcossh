@@ -1,0 +1,17 @@
+{
+  "name": "marcossh",
+  "version": "1.0.0",
+  "description": "SSH profiles for the forgetful",
+  "bin": {
+    "marcossh": "bin/marcossh"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "minimist": "^1.2.5"
+  }
+}
