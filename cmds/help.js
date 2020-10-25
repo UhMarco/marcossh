@@ -3,7 +3,7 @@ const menus = {
     marcossh [command] <options>
 
     connect ............ ssh to a profile or direct ssh
-    list ................. list ssh profiles
+    list ............... list ssh profiles
     add ................ add an ssh profile
     remove ............. remove an ssh profile
     help ............... show help menu for a command
