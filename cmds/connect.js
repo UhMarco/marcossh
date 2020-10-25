@@ -5,9 +5,11 @@ module.exports = (margs) => {
 
   args = margs._.slice(1)
 
-  if (margs.direct || margs.d) {
-    console.log(`Direct connect: ${args}`);
-    shell.exec(`osascript -e 'tell app "Terminal" to do script "ssh ${args}"'`)
+  const target = margs.direct || margs.d || null
+
+  if (target) {
+    console.log(`Direct connect: ${target}`);
+    shell.exec(`osascript -e 'tell app "Terminal" to do script "ssh ${target}"'`)
   } else {
     console.log(`Connect to profile: ${args}`);
   }

@@ -14,7 +14,7 @@ const menus = {
     `,
 
   connect: `
-    marcossh connect [connection] -d
+    marcossh connect <options> [connection]
 
     --direct, -d ....... connect via [user@]hostname
     `,
